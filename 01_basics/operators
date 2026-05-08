@@ -1,0 +1,123 @@
+#===============
+# Operators 
+#===============
+
+# Arithmetic Operators
+#======================
+x = 5 
+y = 2
+
+print(x + y) # Addition
+print(x - y) # Subtraction
+print(x * y) # Multiplication
+print(x / y) # Division
+print(x // y) # Floor Division
+print(x ** y) # Exponentiation
+print(x % y) # Modulus = Remainder
+
+# Relational Operators
+#======================
+a = 10
+b = 12
+
+print(a == b) # Equal to
+print(a != b) # no equal to
+print(a > b) # greater than
+print(a < b) # less than
+print(a >= b) # greater than or equal to
+print(a <= b) # less than or equal to
+
+# Assignment operators
+#=====================
+num = 5
+num **= 3
+print("num :", num)
+
+num = 4
+num ^= 2
+print("num :", num)
+
+num = 10
+num ^= 50
+print("num :", num)
+
+num = 40
+num //= 5
+print("num :", num)
+
+
+# Logical Operators
+#=====================
+"""
+There are 3 Logical Operators in Python:
+1 - AND
+2 - OR
+3 - NOT
+""" 
+
+# Not Operator
+print(not True) 
+print(not False)
+
+a = 10
+b = 4
+
+print(not (a > b))
+print(not (a < b))
+
+# And Operator  (AND operator returns True if both operands and True)
+value1 = True
+value2 = False
+print(value1 and value2)
+
+x = 5
+y = 12
+
+a = (x > 4)
+b = (y > 12)
+
+print(a and b)
+
+# OR Operator
+a = 2
+b = 23
+
+a = (a > 5)
+b = (b > 24)
+
+print(a or b)
+
+# Identity Operator
+a = 'apple'
+b = 'banana'
+c = b
+
+print(a is c)
+print(b is c)
+print(a is not c)
+print(c is not b)
+print(a == b)
+
+
+# Membership Operator 
+#=====================
+
+#Example 1
+fruits = ("apple", "banana", "cherry")
+print("banana" in fruits)
+print(type(fruits))
+
+# Example 2
+dry_fruits = ["almond", "walnuts", "cashews", "dates", "figs"]
+print("almond" in dry_fruits)
+print("Cashews" in dry_fruits)
+print("Cheery" not in dry_fruits)
+print("walnuts" not in dry_fruits)
+
+# Bitwise Operator
+#=====================
+
+# Bitwise Operators convert  decimal value in to binary and then use condition according to operator and at the end convert binary in to decimal. 
+x  = 6  # 6 in binary is 110
+y = 3   # 3 in binary is 011
+print(x & y)
