@@ -1,0 +1,197 @@
+#String is a data type that stores sequences of characters.
+
+#Concatenation --> is a process of combining two or more strings together.
+a = 'Hello '
+b = 'World'
+c = a + b
+print(c)
+
+#length of a string
+#==================
+#length is a function that calculates the number of characters in a string. 
+
+a = 'Hello World'
+print(len(a))
+
+
+# Indexing
+#=========
+# Indexing is a way to access individual characters in a string using their position.
+
+str = 'Noor Ul Huda'
+chr = str[4]
+print(chr)
+
+str = "I love Python. Python is very basic part of becoming an AI Engineer."
+print(str[63]) # Accessing the character at index 63
+
+# Slicing
+#=========
+# Slicing is the concept of accessing parts from the string. 
+
+str = "My name is Noor Ul Huda. I'm a Computer Science Student and I want to learn machine learning and Deep learnig."
+print(str[3:]) # when we don't mention end_str
+print(str[25:len(str)]) # when we want the str end till ending.
+print(str[0:110]) # when we mention both str
+
+# Negative Indexing in Slicing:
+#=============================
+
+# A  p  p  l  e  #variable
+#-5 -4 -3 -2 -1  # negative index 
+
+str = 'Apple'
+print(str[-4: -1])
+
+
+# String Functions
+#==================
+str = "I want to became an AI Engineer. I also want to work with machine learning & deep learning."
+print(str.endswith('learning'))
+print(str.endswith('Learning.'))
+print(str.capitalize())
+print(str.replace('Learning', 'learning'))
+print(str.find('AI'))
+print(str.count('i'))
+print(str.upper())
+print(str.lower())
+print(str.split('.'))
+print(str.strip()) # removes any leading and trailing whitespace from the string.
+print(str.isalpha()) # checks if all characters in the string are alphabetic (letters) and there is at least one character.
+
+#Excercise
+
+# WAP to input user's first name and print its lenght.'
+#======================================================
+
+first_name =input("Enter Your First Name: ")
+print("The lenght of the first_name is:", len(first_name))
+
+# WAP to find the occerance of $ in the string?
+#======================================================
+
+str = "Hy, I'm dollar $. Peoples love to spend me on weekends and they love to make 7 figure $$$$$$."
+print(str.count('$'))
+
+
+Conditional Statements
+#======================
+# if - elif - else
+ 
+age = 17
+
+if age >= 18:
+     print("Not eligible to apply for driving license.")
+elif age >= 17:
+     print ("You have to wait untill you have your own 18 years old CNIC to apply for license.")
+else:
+    print("Invalid Input, Please enter a valid age.")
+
+# ======================================================
+
+age = input("Enter Your Age :")
+if age.isdigit():
+    age = int(age)
+    if age >= 18:
+        print("Eligible to apply for license.")
+    elif age >= 17:
+        print("Wait untill you became of 18.")
+    else:
+        print("Invalid Input")
+# ======================================================
+
+light = input("Enter the traffic light color :")
+if light.lower() == 'red':
+    print("Stop") # the space that comes before print is called indentation. and it is very important in python because it indicates a block of code.
+elif light.lower() == 'yellow':
+    print("Ready to go")
+else:
+    print("Go")
+
+# The space that comes before print is called indentation. and it is very important in python because it indicates a block of code.
+
+# Examples of Conditional Statements
+# ==================================
+""""
+Grade students based on their marks:
+marks >= 90: = grade 'A'
+90 > marks >= 80: = grade 'B'
+80 > marks >= 70: = grade 'C'
+70 > marks >= 60: = grade 'D'
+"""
+marks = int(input("Enter Student's Marks :"))
+if marks >= 90:
+    print("Student got Grade 'A'")
+elif marks >= 80 and marks < 90:
+    print("Student got Grade 'B'")
+elif marks >= 70 and marks < 80:
+    print("Student got Grade 'C'")
+elif marks >= 60 and marks < 70:
+    print("Student got Grade 'D'")
+else:
+    print("Student is Failed") 
+
+# Nesting - is to add a program in the another program.
+# ====================================================
+rain = input("Is there rain? (yes/no): ").lower()
+
+if rain == "yes":
+    rain_type = input("Is it heavy or normal? ").lower()
+
+    if rain_type == "heavy":
+        print("Heavy Water Flood in Karachi. Stay at Home.")
+    elif rain_type == "normal":
+        print("Today is normal flood in Karachi.")
+    else:
+        print("Invalid rain type")
+
+else:
+    print("No rain, weather is normal.")
+
+Practice Exercise
+# ===============
+# what a code to check if a number enter by user is even or odd?
+# ==============================================================
+num = int(input("Enter a number: "))
+
+rem = num % 2
+if rem ==0:
+    print("This number is even.")
+else:
+    print("This number is odd.")
+
+# Write a program to find the greatest of three numbers entered by user.
+# ====================================================================
+num1 = int(input("Enter First Number: "))
+num2 = int(input("Enter Second Number: "))
+num3 = int(input("Enter Third Number: "))
+
+if num1 >= num2 and num1 >= num3:
+    print("The greatest number is: ", num1)
+elif num2 >= num1 and num2 >= num3:
+    print("The greatest number is: ", num2)
+elif num3 >= num1 and num3 >= num2:
+    print("The greatest nuber is: ", num3)
+else:
+  print("Invalid Number")
+
+# wap to check if a number is multiple of 2 or not.
+# ===============================================
+num = int(input("Enter Your Num: "))
+if num % 2 == 0:
+    print("Mutliple of 2")
+else:
+    print("Is not the multiple of 2")
+
+# WAP to check if the number is multiple of 7 or not.
+# ==================================================
+num = int(input("Enter Your Number :"))
+if num % 7 == 0:
+    print("This number is the multiple of 7 :")
+elif num % 7 != 0:
+    print("This number is not the multiple of 7.")
+
+# To import Keywords of Python
+# ============================
+import keyword # library
+print(keyword.kwlist)
